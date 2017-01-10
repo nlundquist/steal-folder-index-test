@@ -1,0 +1,17 @@
+{
+  "name": "steal-folder-index-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "can": "^2.3.28",
+    "faker": "^3.1.0",
+    "lodash": "^4.17.4",
+    "steal": "^1.0.9"
+  }
+}

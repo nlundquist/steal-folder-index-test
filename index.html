@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steal Folder Index Test</title>
+</head>
+<body>
+<script id='main' type='text/stache' can-autorender>
+
+    <ul>
+    {{#each items}}
+        <li>{{firstName}}</li>
+    {{/each}}
+    </ul>
+
+</script>
+<script src='node_modules/steal/steal.js' data-main='can/view/autorender/'></script>
+<script type="text/steal-module" language="javascript">
+    import can from 'can';
+    import faker from 'faker';
+    import lodash from 'lodash';
+
+    var viewModel = can.viewModel(document.getElementById("main"));
+    viewModel.attr("items", _.times(10, function() {
+        return {
+            firstName: faker.Name.firstName()
+        }
+    }));
+</script>
+</body>
+</html>
